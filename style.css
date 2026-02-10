@@ -1,0 +1,115 @@
+/* Importation d'une police moderne */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); /* Dégradé moderne */
+    padding: 20px;
+}
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.95);
+    width: 100%;
+    max-width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
+}
+
+/* Effet de dynamisme au survol du conteneur */
+.wrapper:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 28px;
+    font-weight: 600;
+    position: relative;
+}
+
+h1::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #764ba2;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.input-box {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.input-box input, 
+.input-box textarea {
+    width: 100%;
+    padding: 15px;
+    background: #f0f2f5;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+/* Animation et Focus */
+.input-box input:focus, 
+.input-box textarea:focus {
+    border-color: #764ba2;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(118, 75, 162, 0.2);
+}
+
+textarea {
+    resize: none;
+    height: 120px;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: #764ba2;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, letter-spacing 0.3s ease;
+}
+
+button:hover {
+    background: #5a368a;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsivité pour mobile */
+@media (max-width: 480px) {
+    .wrapper {
+        padding: 20px;
+    }a
+    
+    h1 {
+        font-size: 22px;
+    }
+}
